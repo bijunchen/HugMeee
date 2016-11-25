@@ -64,6 +64,7 @@ void loop() {
   sensorVal = sonar.ping_cm();
 
   if(abs((prevSensorVal-sensorVal))>sensorChangeThreshold &&  sensorVal != 0) //check if there has been enough of a change in the value
+  //also i'm hiding all the 0s because it's keep showing these
   {
   // save randVal to the 'myRandoVal' feed on Adafruit IO
   distVal->save(sensorVal);
